@@ -1,0 +1,12 @@
+<h1>Billboards</h1>
+<%= link_to "Create New Billboard", new_billboard_path %>
+<hr/>
+<h3><%= @billboards.length === 0 ? "No Billboards To View!" : "" %></h3>
+<ul>
+<% @billboards.each do |billboard| %>
+    <li> <%= link_to billboard.name, billboard_path(billboard)  %> </li>
+    <% end %>
+</ul>
+
+
+

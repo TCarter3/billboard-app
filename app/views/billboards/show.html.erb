@@ -1,0 +1,10 @@
+<h1><%= @billboard.name %></h1>
+<%= link_to "Delete", billboard_path(@billboard), method: :delete %>
+<br>
+<%= link_to "Back", billboards_path %>
+<br>
+<%= link_to "Edit", edit_billboard_path(@billboard) %>
+
+<hr />
+<h3>What would you like to do?</h3>
+    <%= link_to "View Artists", billboard_artists_path(@billboard) %>
