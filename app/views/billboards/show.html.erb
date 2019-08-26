@@ -6,23 +6,23 @@
 <%= link_to "Edit", edit_billboard_path(@billboard) %>
 
 <hr />
-<h3>Songs</h3>
+
 
 <h1><%= @billboard.name %> - Songs:</h1>
 <%= link_to 'New Song', new_billboard_song_path(@billboard) %>
 
-
-
+<ul>
+  <% @songs.each do |song| %>
 
 <div class="ui middle aligned animated list">
   <div class="item">
   <i class="angle double right icon"></i>
     <div class="content">
-      <a class="header">Drake</a>
+      <a class="header"><%= link_to song.name, billboard_song_path(@billboard, song) %><</a>
       <div class="description"></div>
     </div>
   </div>
   </div>
-
- 
+  <% end %>
+  </ul>
 
